@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @vmose
-- 👀 I’m interested in python,sql & visualizations
-- 🌱 I’m currently learning whatever looks cool
+- 👀 I’m interested in python,sql & dashboard building tools
+- 🌱 I’m currently learning front-end development.
 - 💞️ I’m looking to collaborate on works involving relational databases
 - 📫 How to reach me vicmose.vm@gmail.com
 
