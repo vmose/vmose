@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @vmose
-- 👀 I’m interested in python,sql & dashboard building tools
+- 👀 I’m interested in coding, querrying & dashboard building
 - 🌱 I’m currently learning front-end development.
 - 💞️ I’m looking to collaborate on works involving relational databases
 - 📫 How to reach me vicmose.vm@gmail.com
