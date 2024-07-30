@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @vmose
-- 👀 I’m interested in coding, querying & dashboard building
-- 🌱 I’m currently learning front-end development.
-- 💞️ I’m looking to collaborate on works involving relational databases
+- 👀 I’m interested in data pipeline engineering, querying & BI development
+- 🌱 I’m currently learning Google Cloud Frameworks.
+- 💞️ I’m looking to collaborate on works involving Data Warehousing & Cloud Automation
 - 📫 How to reach me vicmose.vm@gmail.com
 
 <!---
