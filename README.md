@@ -1,5 +1,5 @@
 <h1 align="center">👋 Hi, I’m @vmose</h1>
-<h3 align="center">Analytics Engineer | BI Developer | Saas Admin</h3>
+<h3 align="center">Analytics Engineer | BI Developer | SaaS Admin</h3>
 <ul align="center">
    <li>🌟 I’m interested in data pipeline engineering, BI deployment & automation</li>
    <li>🌱 I’m currently learning Google Cloud Frameworks.</li>
