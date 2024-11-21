@@ -1,10 +1,12 @@
-# 👋 Hi, I’m @vmose
-- 👀 I’m interested in data pipeline engineering, querying & BI development
+ <h1 align="center">👋 Hi, I’m @vmose</h1>
+<h3 align="center">Analytics Engineer | BI Developer | Saas Admin</h3>
+
+- 🌟 I’m interested in data pipeline engineering, BI deployment & automation
 - 🌱 I’m currently learning Google Cloud Frameworks.
 - 💞️ I’m looking to collaborate on works involving Data Warehousing & Cloud Automation
 - 📫 How to reach me vicmose.vm@gmail.com
 
-## My Stats:
+ <h2 align="center"> My Stats:</h2>
 
 <!---<img src="https://github-readme-stats.vercel.app/api?username=johnkarima&show_icons=true&theme=dark"/> <br><br>-->
 
