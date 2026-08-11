@@ -8,17 +8,15 @@
 </ul>
 <div align="center">
 
+<div align="center">
+
 <h2>My Stats</h2>
 
-<img src="https://github-readme-stats.vercel.app/api?username=vmose&show_icons=true&theme=dark" alt="GitHub Stats" />
+<img src="./profile/stats.svg" alt="GitHub Stats" />
 
 <br><br>
 
-<img src="https://streak-stats.demolab.com/?user=vmose&theme=dark" alt="GitHub Streak" />
-
-<br><br>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vmose&layout=compact&theme=dark" alt="Top Languages" />
+<img src="./profile/top-langs.svg" alt="Top Languages" />
 
 </div>
 
