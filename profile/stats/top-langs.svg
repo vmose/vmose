@@ -1,0 +1,227 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="700"
+    height="300"
+    viewBox="0 0 700 300"
+>
+
+    <rect width="100%" height="100%" rx="12"
+          fill="#0d1117"
+          stroke="#30363d"/>
+    
+    <text x="35" y="45"
+          font-family="Arial, sans-serif"
+          font-size="24"
+          font-weight="bold"
+          fill="#f0f6fc">
+        Top Languages
+    </text>
+    
+        <text x="40" y="85"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            Python
+        </text>
+
+        <rect x="160" y="73"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="73"
+              width="236.9611249459447"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="85"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            52.7%
+        </text>
+        
+        <text x="40" y="112"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            HTML
+        </text>
+
+        <rect x="160" y="100"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="100"
+              width="58.90979854162628"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="112"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            13.1%
+        </text>
+        
+        <text x="40" y="139"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            JavaScript
+        </text>
+
+        <rect x="160" y="127"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="127"
+              width="55.75595353484142"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="139"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            12.4%
+        </text>
+        
+        <text x="40" y="166"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            SQL
+        </text>
+
+        <rect x="160" y="154"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="154"
+              width="35.42371870386663"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="166"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            7.9%
+        </text>
+        
+        <text x="40" y="193"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            CSS
+        </text>
+
+        <rect x="160" y="181"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="181"
+              width="29.825084624446404"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="193"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            6.6%
+        </text>
+        
+        <text x="40" y="220"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            SCSS
+        </text>
+
+        <rect x="160" y="208"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="208"
+              width="27.92159377283369"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="220"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            6.2%
+        </text>
+        
+        <text x="40" y="247"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            HCL
+        </text>
+
+        <rect x="160" y="235"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="235"
+              width="2.860828201189961"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="247"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            0.6%
+        </text>
+        
+        <text x="40" y="274"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#f0f6fc">
+            TSQL
+        </text>
+
+        <rect x="160" y="262"
+              width="450"
+              height="12"
+              rx="6"
+              fill="#21262d"/>
+
+        <rect x="160" y="262"
+              width="2.341897675250891"
+              height="12"
+              rx="6"
+              fill="#58a6ff"/>
+
+        <text x="625" y="274"
+              font-family="Arial, sans-serif"
+              font-size="12"
+              fill="#8b949e">
+            0.5%
+        </text>
+        </svg>

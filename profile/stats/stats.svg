@@ -1,0 +1,86 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="700"
+    height="220"
+    viewBox="0 0 700 220"
+>
+
+    <rect width="100%" height="100%" rx="12"
+          fill="#0d1117"
+          stroke="#30363d"/>
+    
+    <text x="35" y="45"
+          font-family="Arial, sans-serif"
+          font-size="24"
+          font-weight="bold"
+          fill="#f0f6fc">
+        GitHub Stats
+    </text>
+    
+        <text x="40" y="105"
+              font-family="Arial, sans-serif"
+              font-size="28"
+              font-weight="bold"
+              fill="#58a6ff">
+            17
+        </text>
+
+        <text x="40" y="135"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#8b949e">
+            Repositories
+        </text>
+        
+        <text x="205" y="105"
+              font-family="Arial, sans-serif"
+              font-size="28"
+              font-weight="bold"
+              fill="#58a6ff">
+            3
+        </text>
+
+        <text x="205" y="135"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#8b949e">
+            Followers
+        </text>
+        
+        <text x="370" y="105"
+              font-family="Arial, sans-serif"
+              font-size="28"
+              font-weight="bold"
+              fill="#58a6ff">
+            8
+        </text>
+
+        <text x="370" y="135"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#8b949e">
+            Following
+        </text>
+        
+        <text x="535" y="105"
+              font-family="Arial, sans-serif"
+              font-size="28"
+              font-weight="bold"
+              fill="#58a6ff">
+            26
+        </text>
+
+        <text x="535" y="135"
+              font-family="Arial, sans-serif"
+              font-size="13"
+              fill="#8b949e">
+            Contributions
+        </text>
+        
+    <text x="35" y="185"
+          font-family="Arial, sans-serif"
+          font-size="12"
+          fill="#8b949e">
+        Generated automatically by GitHub Actions
+    </text>
+    </svg>
