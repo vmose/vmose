@@ -16,6 +16,10 @@
 
 <br><br>
 
+<img src="./profile/stats/streak.svg" alt="GitHub Contribution Streak">
+
+<br><br>
+
 <img src="./profile/top-langs.svg" alt="Top Languages" />
 
 </div>
