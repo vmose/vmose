@@ -12,26 +12,14 @@
 
 <h2>My Stats</h2>
 
-<img
-  src="./profile/stats/overview.svg"
-  alt="GitHub Statistics"
-/>
+<img src="./profile/stats.svg" alt="GitHub Stats" />
 
 <br><br>
 
-<img
-  src="./profile/stats/contributions.svg"
-  alt="GitHub Contribution Activity"
-/>
-
-<br><br>
-
-<img
-  src="./profile/stats/languages.svg"
-  alt="Top Programming Languages"
-/>
+<img src="./profile/top-langs.svg" alt="Top Languages" />
 
 </div>
+
 
 <!---
 vmose/vmose is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
