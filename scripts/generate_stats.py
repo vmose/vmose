@@ -7,26 +7,26 @@ from pathlib import Path
 
 
 USERNAME = "vmose"
+API = "https://api.github.com"
 
-API_URL = "https://api.github.com"
+TOKEN = os.environ["GITHUB_TOKEN"]
 
-OUTPUT_DIR = Path("profile/stats")
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-TOKEN = os.environ.get("GITHUB_TOKEN")
-
-if not TOKEN:
-    raise RuntimeError("GITHUB_TOKEN is not available")
+OUTPUT = Path("profile/stats")
+OUTPUT.mkdir(parents=True, exist_ok=True)
 
 
-def github_request(url):
+# ---------------------------------------------------------
+# GitHub API
+# ---------------------------------------------------------
+
+def github_get(url):
     request = urllib.request.Request(
         url,
         headers={
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {TOKEN}",
-            "X-GitHub-Api-Version": "2026-03-10",
-            "User-Agent": "vmose-github-stats",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "vmose-profile-stats",
         },
     )
 
@@ -34,11 +34,11 @@ def github_request(url):
         return json.loads(response.read())
 
 
-def graphql_request(query, variables):
+def github_graphql(query, variables):
     payload = json.dumps({
         "query": query,
-        "variables": variables
-    }).encode("utf-8")
+        "variables": variables,
+    }).encode()
 
     request = urllib.request.Request(
         "https://api.github.com/graphql",
@@ -47,8 +47,7 @@ def graphql_request(query, variables):
             "Accept": "application/vnd.github+json",
             "Authorization": f"Bearer {TOKEN}",
             "Content-Type": "application/json",
-            "X-GitHub-Api-Version": "2026-03-10",
-            "User-Agent": "vmose-github-stats",
+            "User-Agent": "vmose-profile-stats",
         },
     )
 
@@ -61,8 +60,12 @@ def graphql_request(query, variables):
     return result["data"]
 
 
+# ---------------------------------------------------------
+# Data collection
+# ---------------------------------------------------------
+
 def get_user():
-    return github_request(f"{API_URL}/users/{USERNAME}")
+    return github_get(f"{API}/users/{USERNAME}")
 
 
 def get_repositories():
@@ -71,19 +74,17 @@ def get_repositories():
     page = 1
 
     while True:
-        url = (
-            f"{API_URL}/users/{USERNAME}/repos"
+        repos = github_get(
+            f"{API}/users/{USERNAME}/repos"
             f"?per_page=100&page={page}&type=owner"
         )
 
-        batch = github_request(url)
-
-        if not batch:
+        if not repos:
             break
 
-        repositories.extend(batch)
+        repositories.extend(repos)
 
-        if len(batch) < 100:
+        if len(repos) < 100:
             break
 
         page += 1
@@ -92,38 +93,46 @@ def get_repositories():
 
 
 def get_languages(repositories):
+
     languages = Counter()
 
     for repo in repositories:
-        if repo.get("fork"):
+
+        if repo["fork"]:
             continue
 
-        url = repo["languages_url"]
-        data = github_request(url)
+        data = github_get(repo["languages_url"])
 
-        for language, bytes_count in data.items():
-            languages[language] += bytes_count
+        for language, amount in data.items():
+            languages[language] += amount
 
     return languages
 
 
 def get_contributions():
+
     query = """
     query($login: String!) {
       user(login: $login) {
+
         contributionsCollection {
+
           totalCommitContributions
           totalIssueContributions
           totalPullRequestContributions
           totalPullRequestReviewContributions
 
           contributionCalendar {
+
             totalContributions
+
             weeks {
+
               contributionDays {
                 contributionCount
                 date
               }
+
             }
           }
         }
@@ -131,55 +140,20 @@ def get_contributions():
     }
     """
 
-    data = graphql_request(
+    data = github_graphql(
         query,
-        {"login": USERNAME}
+        {"login": USERNAME},
     )
 
     return data["user"]["contributionsCollection"]
 
 
-def calculate_streak(calendar):
-    days = []
+# ---------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------
 
-    for week in calendar["weeks"]:
-        for day in week["contributionDays"]:
-            days.append({
-                "date": day["date"],
-                "count": day["contributionCount"]
-            })
+def esc(value):
 
-    days.sort(key=lambda x: x["date"])
-
-    longest = 0
-    current = 0
-
-    for day in days:
-        if day["count"] > 0:
-            current += 1
-            longest = max(longest, current)
-        else:
-            current = 0
-
-    # Current streak.
-    today = datetime.now(timezone.utc).date()
-
-    by_date = {
-        datetime.strptime(day["date"], "%Y-%m-%d").date(): day["count"]
-        for day in days
-    }
-
-    current_streak = 0
-    date = today
-
-    while by_date.get(date, 0) > 0:
-        current_streak += 1
-        date -= timedelta(days=1)
-
-    return current_streak, longest
-
-
-def escape(value):
     return (
         str(value)
         .replace("&", "&amp;")
@@ -189,221 +163,383 @@ def escape(value):
     )
 
 
-def svg_header(width, height):
-    return f'''<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="{width}"
-    height="{height}"
-    viewBox="0 0 {width} {height}"
->
-'''
+def svg_start(width, height):
+
+    return f"""
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="{width}"
+     height="{height}"
+     viewBox="0 0 {width} {height}">
+
+<rect
+    width="100%"
+    height="100%"
+    rx="14"
+    fill="#0d1117"
+    stroke="#30363d"/>
+"""
 
 
-def generate_stats(user, contributions):
-    width = 700
-    height = 220
+def svg_end():
+
+    return "</svg>"
+
+
+def text(x, y, value, size=14, color="#f0f6fc",
+         weight="normal"):
+
+    return f"""
+<text
+    x="{x}"
+    y="{y}"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="{size}px"
+    font-weight="{weight}"
+    fill="{color}">
+    {esc(value)}
+</text>
+"""
+
+
+# ---------------------------------------------------------
+# Overview card
+# ---------------------------------------------------------
+
+def generate_overview(user, contributions):
+
+    width = 800
+    height = 270
+
+    svg = svg_start(width, height)
+
+    svg += text(
+        35,
+        45,
+        "GitHub Activity",
+        26,
+        "#f0f6fc",
+        "bold",
+    )
 
     stats = [
-        ("Repositories", user["public_repos"]),
-        ("Followers", user["followers"]),
-        ("Following", user["following"]),
-        ("Contributions", contributions["contributionCalendar"]["totalContributions"]),
+
+        (
+            "Repositories",
+            user["public_repos"],
+        ),
+
+        (
+            "Contributions",
+            contributions["contributionCalendar"]
+            ["totalContributions"],
+        ),
+
+        (
+            "Pull Requests",
+            contributions["totalPullRequestContributions"],
+        ),
+
+        (
+            "Code Reviews",
+            contributions["totalPullRequestReviewContributions"],
+        ),
+
+        (
+            "Issues",
+            contributions["totalIssueContributions"],
+        ),
+
+        (
+            "Commits",
+            contributions["totalCommitContributions"],
+        ),
+
+        (
+            "Followers",
+            user["followers"],
+        ),
+
+        (
+            "Following",
+            user["following"],
+        ),
     ]
 
-    svg = svg_header(width, height)
+    positions = [
 
-    svg += '''
-    <rect width="100%" height="100%" rx="12"
-          fill="#0d1117"
-          stroke="#30363d"/>
-    '''
+        (45, 105),
+        (240, 105),
+        (435, 105),
+        (630, 105),
 
-    svg += '''
-    <text x="35" y="45"
-          font-family="Arial, sans-serif"
-          font-size="24"
-          font-weight="bold"
-          fill="#f0f6fc">
-        GitHub Stats
-    </text>
-    '''
+        (45, 195),
+        (240, 195),
+        (435, 195),
+        (630, 195),
+    ]
 
-    x_positions = [40, 205, 370, 535]
+    for (label, value), (x, y) in zip(stats, positions):
 
-    for (label, value), x in zip(stats, x_positions):
-        svg += f'''
-        <text x="{x}" y="105"
-              font-family="Arial, sans-serif"
-              font-size="28"
-              font-weight="bold"
-              fill="#58a6ff">
-            {escape(value)}
-        </text>
+        svg += text(
+            x,
+            y,
+            value,
+            30,
+            "#58a6ff",
+            "bold",
+        )
 
-        <text x="{x}" y="135"
-              font-family="Arial, sans-serif"
-              font-size="13"
-              fill="#8b949e">
-            {escape(label)}
-        </text>
-        '''
+        svg += text(
+            x,
+            y + 25,
+            label,
+            12,
+            "#8b949e",
+        )
 
-    svg += '''
-    <text x="35" y="185"
-          font-family="Arial, sans-serif"
-          font-size="12"
-          fill="#8b949e">
-        Generated automatically by GitHub Actions
-    </text>
-    '''
+    svg += text(
+        35,
+        250,
+        "Generated from GitHub data",
+        11,
+        "#6e7681",
+    )
 
-    svg += "</svg>"
+    svg += svg_end()
 
-    (OUTPUT_DIR / "stats.svg").write_text(svg, encoding="utf-8")
+    (OUTPUT / "overview.svg").write_text(
+        svg,
+        encoding="utf-8",
+    )
 
 
-def generate_streak(contributions):
+# ---------------------------------------------------------
+# Contribution heatmap
+# ---------------------------------------------------------
+
+def generate_contributions(contributions):
+
     calendar = contributions["contributionCalendar"]
 
-    current, longest = calculate_streak(calendar)
-
-    width = 700
+    width = 900
     height = 220
 
-    svg = svg_header(width, height)
+    svg = svg_start(width, height)
 
-    svg += '''
-    <rect width="100%" height="100%" rx="12"
-          fill="#0d1117"
-          stroke="#30363d"/>
-    '''
+    svg += text(
+        35,
+        40,
+        "Contribution Activity",
+        24,
+        "#f0f6fc",
+        "bold",
+    )
 
-    svg += '''
-    <text x="35" y="45"
-          font-family="Arial, sans-serif"
-          font-size="24"
-          font-weight="bold"
-          fill="#f0f6fc">
-        Contribution Streak
-    </text>
-    '''
+    days = []
 
-    svg += f'''
-    <text x="40" y="105"
-          font-family="Arial, sans-serif"
-          font-size="38"
-          font-weight="bold"
-          fill="#58a6ff">
-        {current}
-    </text>
+    for week in calendar["weeks"]:
 
-    <text x="40" y="135"
-          font-family="Arial, sans-serif"
-          font-size="13"
-          fill="#8b949e">
-        Current streak
-    </text>
+        for day in week["contributionDays"]:
 
-    <text x="350" y="105"
-          font-family="Arial, sans-serif"
-          font-size="38"
-          font-weight="bold"
-          fill="#58a6ff">
-        {longest}
-    </text>
+            days.append(day)
 
-    <text x="350" y="135"
-          font-family="Arial, sans-serif"
-          font-size="13"
-          fill="#8b949e">
-        Longest streak
-    </text>
-    '''
+    days.sort(
+        key=lambda x: x["date"]
+    )
 
-    svg += '''
-    <text x="35" y="185"
-          font-family="Arial, sans-serif"
-          font-size="12"
-          fill="#8b949e">
-        Based on GitHub contribution activity
-    </text>
-    '''
+    cell = 12
+    gap = 3
 
-    svg += "</svg>"
+    start_x = 35
+    start_y = 70
 
-    (OUTPUT_DIR / "streak.svg").write_text(svg, encoding="utf-8")
+    max_count = max(
+        day["contributionCount"]
+        for day in days
+    )
 
+    for index, day in enumerate(days):
+
+        date = datetime.strptime(
+            day["date"],
+            "%Y-%m-%d",
+        )
+
+        week = index // 7
+        weekday = date.weekday()
+
+        x = start_x + week * (cell + gap)
+        y = start_y + weekday * (cell + gap)
+
+        count = day["contributionCount"]
+
+        if count == 0:
+            fill = "#161b22"
+
+        elif count <= max_count * 0.25:
+            fill = "#0e4429"
+
+        elif count <= max_count * 0.50:
+            fill = "#006d32"
+
+        elif count <= max_count * 0.75:
+            fill = "#26a641"
+
+        else:
+            fill = "#39d353"
+
+        svg += f"""
+<rect
+    x="{x}"
+    y="{y}"
+    width="{cell}"
+    height="{cell}"
+    rx="2"
+    fill="{fill}">
+    <title>{esc(day["date"])}: {count} contributions</title>
+</rect>
+"""
+
+    svg += text(
+        35,
+        190,
+        f"{calendar['totalContributions']} contributions in the last year",
+        12,
+        "#8b949e",
+    )
+
+    svg += svg_end()
+
+    (OUTPUT / "contributions.svg").write_text(
+        svg,
+        encoding="utf-8",
+    )
+
+
+# ---------------------------------------------------------
+# Languages
+# ---------------------------------------------------------
 
 def generate_languages(languages):
-    width = 700
-    height = 300
 
-    top_languages = languages.most_common(8)
+    width = 800
+    height = 340
 
-    total = sum(languages.values())
+    svg = svg_start(width, height)
 
-    svg = svg_header(width, height)
+    svg += text(
+        35,
+        45,
+        "Top Languages",
+        25,
+        "#f0f6fc",
+        "bold",
+    )
 
-    svg += '''
-    <rect width="100%" height="100%" rx="12"
-          fill="#0d1117"
-          stroke="#30363d"/>
-    '''
+    top = languages.most_common(8)
 
-    svg += '''
-    <text x="35" y="45"
-          font-family="Arial, sans-serif"
-          font-size="24"
-          font-weight="bold"
-          fill="#f0f6fc">
-        Top Languages
-    </text>
-    '''
+    total = sum(
+        languages.values()
+    )
 
-    y = 85
+    bar_x = 40
+    bar_y = 70
 
-    for language, bytes_count in top_languages:
-        percentage = (bytes_count / total * 100) if total else 0
+    bar_width = 720
+    bar_height = 16
 
-        bar_width = percentage * 4.5
+    # Language bar
 
-        svg += f'''
-        <text x="40" y="{y}"
-              font-family="Arial, sans-serif"
-              font-size="13"
-              fill="#f0f6fc">
-            {escape(language)}
-        </text>
+    current_x = bar_x
 
-        <rect x="160" y="{y - 12}"
-              width="450"
-              height="12"
-              rx="6"
-              fill="#21262d"/>
+    language_colors = [
+        "#3178c6",
+        "#f1e05a",
+        "#3572A5",
+        "#e34c26",
+        "#563d7c",
+        "#89e051",
+        "#DA5B0B",
+        "#384d54",
+    ]
 
-        <rect x="160" y="{y - 12}"
-              width="{bar_width}"
-              height="12"
-              rx="6"
-              fill="#58a6ff"/>
+    for index, (language, amount) in enumerate(top):
 
-        <text x="625" y="{y}"
-              font-family="Arial, sans-serif"
-              font-size="12"
-              fill="#8b949e">
-            {percentage:.1f}%
-        </text>
-        '''
+        percentage = amount / total
+
+        width = bar_width * percentage
+
+        color = language_colors[
+            index % len(language_colors)
+        ]
+
+        svg += f"""
+<rect
+    x="{current_x}"
+    y="{bar_y}"
+    width="{width}"
+    height="{bar_height}"
+    fill="{color}"/>
+"""
+
+        current_x += width
+
+    # Labels
+
+    y = 125
+
+    for index, (language, amount) in enumerate(top):
+
+        percentage = (
+            amount / total * 100
+        )
+
+        color = language_colors[
+            index % len(language_colors)
+        ]
+
+        svg += f"""
+<circle
+    cx="48"
+    cy="{y - 5}"
+    r="5"
+    fill="{color}"/>
+"""
+
+        svg += text(
+            65,
+            y,
+            language,
+            14,
+            "#f0f6fc",
+            "bold",
+        )
+
+        svg += text(
+            300,
+            y,
+            f"{percentage:.1f}%",
+            13,
+            "#8b949e",
+        )
 
         y += 27
 
-    svg += "</svg>"
+    svg += svg_end()
 
-    (OUTPUT_DIR / "top-langs.svg").write_text(svg, encoding="utf-8")
+    (OUTPUT / "languages.svg").write_text(
+        svg,
+        encoding="utf-8",
+    )
 
+
+# ---------------------------------------------------------
+# Main
+# ---------------------------------------------------------
 
 def main():
-    print("Fetching GitHub profile...")
+
+    print("Fetching profile...")
 
     user = get_user()
 
@@ -411,23 +547,40 @@ def main():
 
     repositories = get_repositories()
 
-    print(f"Found {len(repositories)} repositories.")
+    print(
+        f"Found {len(repositories)} repositories."
+    )
 
     print("Calculating languages...")
 
-    languages = get_languages(repositories)
+    languages = get_languages(
+        repositories
+    )
 
-    print("Fetching contribution data...")
+    print("Fetching contributions...")
 
     contributions = get_contributions()
 
-    print("Generating SVGs...")
+    print("Generating overview...")
 
-    generate_stats(user, contributions)
-    generate_streak(contributions)
-    generate_languages(languages)
+    generate_overview(
+        user,
+        contributions,
+    )
 
-    print("Stats generated successfully.")
+    print("Generating contribution heatmap...")
+
+    generate_contributions(
+        contributions
+    )
+
+    print("Generating language statistics...")
+
+    generate_languages(
+        languages
+    )
+
+    print("Done.")
 
 
 if __name__ == "__main__":
