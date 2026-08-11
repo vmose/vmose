@@ -1,0 +1,287 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="340"
+     viewBox="0 0 800 340">
+
+<rect
+    width="100%"
+    height="100%"
+    rx="14"
+    fill="#0d1117"
+    stroke="#30363d"/>
+
+<text
+    x="35"
+    y="45"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="25px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    Top Languages
+</text>
+
+<rect
+    x="40"
+    y="70"
+    width="379.1377999135115"
+    height="16"
+    fill="#3178c6"/>
+
+<rect
+    x="419.1377999135115"
+    y="70"
+    width="94.25567766660205"
+    height="16"
+    fill="#f1e05a"/>
+
+<rect
+    x="513.3934775801135"
+    y="70"
+    width="89.20952565574626"
+    height="16"
+    fill="#3572A5"/>
+
+<rect
+    x="602.6030032358598"
+    y="70"
+    width="56.67794992618661"
+    height="16"
+    fill="#e34c26"/>
+
+<rect
+    x="659.2809531620464"
+    y="70"
+    width="47.72013539911424"
+    height="16"
+    fill="#563d7c"/>
+
+<rect
+    x="707.0010885611607"
+    y="70"
+    width="44.6745500365339"
+    height="16"
+    fill="#89e051"/>
+
+<rect
+    x="751.6756385976946"
+    y="70"
+    width="4.577325121903938"
+    height="16"
+    fill="#DA5B0B"/>
+
+<rect
+    x="756.2529637195986"
+    y="70"
+    width="3.7470362804014257"
+    height="16"
+    fill="#384d54"/>
+
+<circle
+    cx="48"
+    cy="120"
+    r="5"
+    fill="#3178c6"/>
+
+<text
+    x="65"
+    y="125"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    Python
+</text>
+
+<text
+    x="300"
+    y="125"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    52.7%
+</text>
+
+<circle
+    cx="48"
+    cy="147"
+    r="5"
+    fill="#f1e05a"/>
+
+<text
+    x="65"
+    y="152"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    HTML
+</text>
+
+<text
+    x="300"
+    y="152"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    13.1%
+</text>
+
+<circle
+    cx="48"
+    cy="174"
+    r="5"
+    fill="#3572A5"/>
+
+<text
+    x="65"
+    y="179"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    JavaScript
+</text>
+
+<text
+    x="300"
+    y="179"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    12.4%
+</text>
+
+<circle
+    cx="48"
+    cy="201"
+    r="5"
+    fill="#e34c26"/>
+
+<text
+    x="65"
+    y="206"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    SQL
+</text>
+
+<text
+    x="300"
+    y="206"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    7.9%
+</text>
+
+<circle
+    cx="48"
+    cy="228"
+    r="5"
+    fill="#563d7c"/>
+
+<text
+    x="65"
+    y="233"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    CSS
+</text>
+
+<text
+    x="300"
+    y="233"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    6.6%
+</text>
+
+<circle
+    cx="48"
+    cy="255"
+    r="5"
+    fill="#89e051"/>
+
+<text
+    x="65"
+    y="260"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    SCSS
+</text>
+
+<text
+    x="300"
+    y="260"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    6.2%
+</text>
+
+<circle
+    cx="48"
+    cy="282"
+    r="5"
+    fill="#DA5B0B"/>
+
+<text
+    x="65"
+    y="287"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    HCL
+</text>
+
+<text
+    x="300"
+    y="287"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    0.6%
+</text>
+
+<circle
+    cx="48"
+    cy="309"
+    r="5"
+    fill="#384d54"/>
+
+<text
+    x="65"
+    y="314"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14px"
+    font-weight="bold"
+    fill="#f0f6fc">
+    TSQL
+</text>
+
+<text
+    x="300"
+    y="314"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13px"
+    font-weight="normal"
+    fill="#8b949e">
+    0.5%
+</text>
+</svg>
