@@ -24,56 +24,56 @@
 <rect
     x="40"
     y="70"
-    width="405.9162110488713"
+    width="400.1613663230468"
     height="16"
     fill="#3178c6"/>
 
 <rect
-    x="445.9162110488713"
+    x="440.1613663230468"
     y="70"
-    width="74.31120652064536"
+    width="76.57294964742451"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="520.2274175695167"
+    x="516.7343159704714"
     y="70"
-    width="68.2977224700634"
+    width="73.25766531368059"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="588.52514003958"
+    x="589.991981284152"
     y="70"
-    width="67.31962566665548"
+    width="67.32943695387999"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="655.8447657062355"
+    x="657.3214182380319"
     y="70"
-    width="38.951799550531646"
+    width="38.3995635173229"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="694.7965652567672"
+    x="695.7209817553548"
     y="70"
-    width="37.683896286854726"
+    width="37.14963585109989"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="732.4804615436219"
+    x="732.8706176064547"
     y="70"
-    width="24.3588367490692"
+    width="24.013491282746536"
     height="16"
     fill="#DA5B0B"/>
 
 <rect
-    x="756.8392982926911"
+    x="756.8841088892012"
     y="70"
-    width="3.1607017073088923"
+    width="3.1158911107988128"
     height="16"
     fill="#384d54"/>
 
@@ -100,7 +100,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    56.4%
+    55.6%
 </text>
 
 <circle
@@ -116,7 +116,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    HTML
+    SQL
 </text>
 
 <text
@@ -126,7 +126,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    10.3%
+    10.6%
 </text>
 
 <circle
@@ -142,7 +142,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    JavaScript
+    HTML
 </text>
 
 <text
@@ -152,7 +152,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    9.5%
+    10.2%
 </text>
 
 <circle
@@ -168,7 +168,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    SQL
+    JavaScript
 </text>
 
 <text
@@ -178,7 +178,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    9.3%
+    9.4%
 </text>
 
 <circle
@@ -204,7 +204,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    5.4%
+    5.3%
 </text>
 
 <circle
@@ -256,7 +256,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    3.4%
+    3.3%
 </text>
 
 <circle
