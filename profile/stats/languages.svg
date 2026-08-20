@@ -24,56 +24,56 @@
 <rect
     x="40"
     y="70"
-    width="418.39123469638326"
+    width="425.58971569839304"
     height="16"
     fill="#3178c6"/>
 
 <rect
-    x="458.39123469638326"
+    x="465.58971569839304"
     y="70"
-    width="72.20851506682726"
+    width="73.74318912237331"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="530.5997497632105"
+    x="539.3329048207663"
     y="70"
-    width="69.08219226136882"
+    width="63.52138442521631"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="599.6819420245794"
+    x="602.8542892459826"
     y="70"
-    width="63.491855611033806"
+    width="61.065018541409145"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="663.1737976356131"
+    x="663.9193077873917"
     y="70"
-    width="36.21090050164291"
+    width="44.819777503090236"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="699.384698137256"
+    x="708.739085290482"
     y="70"
-    width="35.03221506331926"
+    width="29.625908529048207"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="734.4169132005753"
+    x="738.3649938195301"
     y="70"
-    width="22.644792385317885"
+    width="19.15016069221261"
     height="16"
     fill="#DA5B0B"/>
 
 <rect
-    x="757.0617055858932"
+    x="757.5151545117427"
     y="70"
-    width="2.9382944141068066"
+    width="2.4848454882571076"
     height="16"
     fill="#384d54"/>
 
@@ -100,7 +100,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    58.1%
+    59.1%
 </text>
 
 <circle
@@ -116,7 +116,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    SQL
+    JavaScript
 </text>
 
 <text
@@ -126,7 +126,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    10.0%
+    10.2%
 </text>
 
 <circle
@@ -152,7 +152,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    9.6%
+    8.8%
 </text>
 
 <circle
@@ -168,7 +168,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    JavaScript
+    SQL
 </text>
 
 <text
@@ -178,7 +178,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    8.8%
+    8.5%
 </text>
 
 <circle
@@ -204,7 +204,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    5.0%
+    6.2%
 </text>
 
 <circle
@@ -230,7 +230,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    4.9%
+    4.1%
 </text>
 
 <circle
@@ -256,7 +256,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    3.1%
+    2.7%
 </text>
 
 <circle
@@ -282,6 +282,6 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    0.4%
+    0.3%
 </text>
 </svg>
