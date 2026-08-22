@@ -24,56 +24,56 @@
 <rect
     x="40"
     y="70"
-    width="424.5024855993056"
+    width="421.8856352047612"
     height="16"
     fill="#3178c6"/>
 
 <rect
-    x="464.5024855993056"
+    x="461.8856352047612"
     y="70"
-    width="73.55480154659512"
+    width="72.6778462877897"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="538.0572871459008"
+    x="534.5634814925509"
     y="70"
-    width="63.359109918724855"
+    width="64.71116424427103"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="601.4163970646256"
+    x="599.2746457368219"
     y="70"
-    width="62.74836266077487"
+    width="62.60371253516642"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="664.1647597254005"
+    x="661.8783582719883"
     y="70"
-    width="44.70527893947763"
+    width="44.1722813833969"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="708.870038664878"
+    x="706.0506396553852"
     y="70"
-    width="29.55022488755622"
+    width="29.197913079636933"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="738.4202635524342"
+    x="735.2485527350221"
     y="70"
-    width="19.101238854257083"
+    width="18.873504817719333"
     height="16"
     fill="#DA5B0B"/>
 
 <rect
-    x="757.5215024066913"
+    x="754.1220575527415"
     y="70"
-    width="2.478497593308609"
+    width="3.4289946787429098"
     height="16"
     fill="#384d54"/>
 
@@ -100,7 +100,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    59.0%
+    58.6%
 </text>
 
 <circle
@@ -126,7 +126,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    10.2%
+    10.1%
 </text>
 
 <circle
@@ -142,7 +142,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    HTML
+    SQL
 </text>
 
 <text
@@ -152,7 +152,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    8.8%
+    9.0%
 </text>
 
 <circle
@@ -168,7 +168,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    SQL
+    HTML
 </text>
 
 <text
@@ -204,7 +204,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    6.2%
+    6.1%
 </text>
 
 <circle
@@ -256,7 +256,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    2.7%
+    2.6%
 </text>
 
 <circle
@@ -272,7 +272,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    TSQL
+    Dockerfile
 </text>
 
 <text
@@ -282,6 +282,6 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    0.3%
+    0.5%
 </text>
 </svg>
