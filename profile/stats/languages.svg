@@ -24,56 +24,56 @@
 <rect
     x="40"
     y="70"
-    width="421.82751606761065"
+    width="410.6980658141992"
     height="16"
     fill="#3178c6"/>
 
 <rect
-    x="461.82751606761065"
+    x="450.6980658141992"
     y="70"
-    width="72.69201525854393"
+    width="79.96482148167364"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="534.5195313261546"
+    x="530.6628872958728"
     y="70"
-    width="64.72378006381554"
+    width="72.5234259827524"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="599.2433113899701"
+    x="603.1863132786252"
     y="70"
-    width="62.61591749468746"
+    width="69.69446571043524"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="661.8592288846576"
+    x="672.8807789890604"
     y="70"
-    width="44.18089302772922"
+    width="63.016115051470734"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="706.0401219123868"
+    x="735.8968940405312"
     y="70"
-    width="29.203605383380662"
+    width="18.3791307868979"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="735.2437272957675"
+    x="754.2760248274291"
     y="70"
-    width="18.87718431775203"
+    width="3.3391753294822557"
     height="16"
     fill="#DA5B0B"/>
 
 <rect
-    x="754.1209116135195"
+    x="757.6152001569113"
     y="70"
-    width="3.4296631812894383"
+    width="2.384799843088623"
     height="16"
     fill="#384d54"/>
 
@@ -100,7 +100,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    58.6%
+    57.0%
 </text>
 
 <circle
@@ -116,7 +116,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    JavaScript
+    CSS
 </text>
 
 <text
@@ -126,7 +126,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    10.1%
+    11.1%
 </text>
 
 <circle
@@ -142,7 +142,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    SQL
+    JavaScript
 </text>
 
 <text
@@ -152,7 +152,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    9.0%
+    10.1%
 </text>
 
 <circle
@@ -178,7 +178,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    8.7%
+    9.7%
 </text>
 
 <circle
@@ -194,7 +194,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    CSS
+    SQL
 </text>
 
 <text
@@ -204,7 +204,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    6.1%
+    8.8%
 </text>
 
 <circle
@@ -220,7 +220,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    SCSS
+    HCL
 </text>
 
 <text
@@ -230,7 +230,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    4.1%
+    2.6%
 </text>
 
 <circle
@@ -246,7 +246,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    HCL
+    Dockerfile
 </text>
 
 <text
@@ -256,7 +256,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    2.6%
+    0.5%
 </text>
 
 <circle
@@ -272,7 +272,7 @@
     font-size="14px"
     font-weight="bold"
     fill="#f0f6fc">
-    Dockerfile
+    TSQL
 </text>
 
 <text
@@ -282,6 +282,6 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    0.5%
+    0.3%
 </text>
 </svg>
