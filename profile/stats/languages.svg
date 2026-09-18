@@ -31,51 +31,44 @@
 <rect
     x="445.0721244079006"
     y="70"
-    width="82.59612119045491"
+    width="84.8418982929663"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="527.6682455983555"
+    x="529.9140227008669"
     y="70"
     width="75.30324425775315"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="602.9714898561086"
+    x="605.21726695862"
     y="70"
     width="68.29564751094826"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="671.2671373670569"
+    x="673.5129144695683"
     y="70"
     width="65.62302261149343"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="736.8901599785503"
+    x="739.1359370810617"
     y="70"
     width="17.307712932344266"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="754.1978729108946"
+    x="756.443650013406"
     y="70"
     width="3.5563499865939763"
     height="16"
     fill="#DA5B0B"/>
-
-<rect
-    x="757.7542228974886"
-    y="70"
-    width="2.2457771025113953"
-    height="16"
-    fill="#384d54"/>
 
 <circle
     cx="48"
@@ -126,7 +119,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    11.5%
+    11.8%
 </text>
 
 <circle
@@ -257,31 +250,5 @@
     font-weight="normal"
     fill="#8b949e">
     0.5%
-</text>
-
-<circle
-    cx="48"
-    cy="309"
-    r="5"
-    fill="#384d54"/>
-
-<text
-    x="65"
-    y="314"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="14px"
-    font-weight="bold"
-    fill="#f0f6fc">
-    TSQL
-</text>
-
-<text
-    x="300"
-    y="314"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="13px"
-    font-weight="normal"
-    fill="#8b949e">
-    0.3%
 </text>
 </svg>
