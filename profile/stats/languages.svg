@@ -24,56 +24,56 @@
 <rect
     x="40"
     y="70"
-    width="412.4337294201861"
+    width="424.15559114398457"
     height="16"
     fill="#3178c6"/>
 
 <rect
-    x="452.4337294201861"
+    x="464.15559114398457"
     y="70"
-    width="81.54296349319971"
+    width="78.36484009972098"
     height="16"
     fill="#f1e05a"/>
 
 <rect
-    x="533.9766929133858"
+    x="542.5204312437055"
     y="70"
-    width="72.37520400858983"
+    width="69.5543925110205"
     height="16"
     fill="#3572A5"/>
 
 <rect
-    x="606.3518969219756"
+    x="612.074823754726"
     y="70"
-    width="65.64008589835362"
+    width="63.08177450510988"
     height="16"
     fill="#e34c26"/>
 
 <rect
-    x="671.9919828203292"
+    x="675.1565982598358"
     y="70"
-    width="63.07138153185397"
+    width="60.607241328072114"
     height="16"
     fill="#563d7c"/>
 
 <rect
-    x="735.0633643521832"
+    x="735.7638395879079"
     y="70"
-    width="16.634731567644952"
+    width="15.986395680958907"
     height="16"
     fill="#89e051"/>
 
 <rect
-    x="751.6980959198281"
+    x="751.7502352688668"
     y="70"
-    width="4.883836793128132"
+    width="4.693490069177302"
     height="16"
     fill="#DA5B0B"/>
 
 <rect
-    x="756.5819327129562"
+    x="756.4437253380441"
     y="70"
-    width="3.418067287043665"
+    width="3.556274661955786"
     height="16"
     fill="#384d54"/>
 
@@ -100,7 +100,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    57.3%
+    58.9%
 </text>
 
 <circle
@@ -126,7 +126,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    11.3%
+    10.9%
 </text>
 
 <circle
@@ -152,7 +152,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    10.1%
+    9.7%
 </text>
 
 <circle
@@ -178,7 +178,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    9.1%
+    8.8%
 </text>
 
 <circle
@@ -204,7 +204,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    8.8%
+    8.4%
 </text>
 
 <circle
@@ -230,7 +230,7 @@
     font-size="13px"
     font-weight="normal"
     fill="#8b949e">
-    2.3%
+    2.2%
 </text>
 
 <circle
