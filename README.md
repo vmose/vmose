@@ -1,10 +1,10 @@
 <h1 align="center">👋 Hi, I’m @vmose</h1>
 <h3 align="center">Analytics Engineer | BI Developer | Cloud Analyst</h3>
 <ul align="center">
-   <li>🌟 I’m interested in data pipeline engineering, BI development & deployment</li>
-   <li>🌱 I’m currently learning Google Cloud Frameworks.</li>
-   <li>💞️ I’m looking to collaborate on works involving Data Warehousing & Cloud Automation</li>
-   <li>📫 How to reach me vicmose.vm@gmail.com</li>
+   <li>I’m interested in data pipeline engineering, BI development & deployment</li>
+   <li>I’m currently learning Google Cloud Frameworks.</li>
+   <li>I’m looking to collaborate on works involving Data Warehousing & Cloud Automation</li>
+   <li>How to reach me vicmose.vm@gmail.com</li>
 </ul>
 <div align="center">
 
